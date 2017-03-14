@@ -22,3 +22,13 @@ Initial structure for an electron app
 * devtron
 * standard
 * del
+
+## Directory structure
+* compiled
+* compiled-test
+* maps
+* node_modules(auto-generated)
+* src
+* test
+    - src
+    - resource 
