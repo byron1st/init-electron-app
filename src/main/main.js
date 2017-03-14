@@ -5,10 +5,6 @@ import path from 'path'
 
 import testMode from './app.mode'
 
-// A path to React Developer Tools(Chrome plugin)
-// URL: https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi
-const REACT_CHROME_DEV_TOOL_PATH = '...'
-
 let mainWindow = null
 
 app.on('ready', initialize)
@@ -30,7 +26,9 @@ function createMainWindow () {
   })
 
   if (testMode) {
-    BrowserWindow.addDevToolsExtension(REACT_CHROME_DEV_TOOL_PATH)
+    // A path to React Developer Tools(Chrome plugin)
+    // URL: https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi
+    BrowserWindow.addDevToolsExtension('path/to/react-developer-tools')
     mainWindow.webContents.openDevTools()
   }
 }
